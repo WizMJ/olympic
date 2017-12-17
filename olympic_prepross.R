@@ -43,6 +43,7 @@ df[df$Country == "Serbia and Montenegro",c("POP96","GDP96")] <- c(10471653,2000.
 df[df$Country == "North Korea",c("POP96","GDP96")] <- c(22113548, 1115.261)
 df <- df[complete.cases(df),]
 
+### ---------------------------------pre-processing done ------------------------###
 ### Data exploration
 library(ggplot2)
 pop96_head <- head(sort(df$POP96, decreasing =T), 30)
