@@ -1,0 +1,109 @@
+Country,L_city,S_city,Avg_temp,Min_temp
+Mongolia,Ulaanbaatar,Darkhan,-1,-29
+North Korea,Pyongyang,Hamhung,11,-11
+Russia,Moscow,Saint Petersburg,6,-10
+Kazakhstan,Almaty,Astana,10,-10
+Canada,Toronto,Montreal,9,-9
+Estonia,Tallinn,Tartu,7,-8
+Armenia,Yerevan,Gyumri,11,-8
+Kyrgyzstan,Bishkek,Osh,12,-8
+Finland,Helsinki,Espoo,6,-7
+South Korea,Seoul,Busan,12,-7
+Belarus,Minsk,Homel,7,-6
+Lithuania,Vilnius,Kaunas,7,-6
+Norway,Oslo,Bergen,7,-5
+Latvia,Riga,Daugavpils,7,-5
+Ukraine,Kiev,Kharkiv,9,-5
+Bulgaria,Sofia,Plovdiv,11,-5
+Sweden,Stockholm,Gothenburg,7,-4
+Poland,Warsaw,Krak?w,9,-4
+Moldova,Chi?in?u,Tiraspol,10,-4
+Romania,Bucharest,Cluj-Napoca,11,-4
+Hungary,Budapest,Debrecen,11,-4
+Bosnia and Herzegovina,Sarajevo,Banja Luka,11,-4
+Bolivia,Santa Cruz de la Sierra,El Alto,8,-3
+Czech Republic,Prague,Brno,9,-3
+Slovakia,Bratislava,Ko?ice,11,-3
+Croatia,Zagreb,Split,12,-3
+United States,New York City,Los Angeles,13,-3
+Macedonia,Skopje,Bitola,13,-3
+Iceland,Reykjav?k,K?pavogur,5,-2
+Switzerland,Z?rich,Geneva,10,-2
+Germany,Berlin,Hamburg,10,-2
+Liechtenstein,Schaan,Vaduz,11,-2
+Uzbekistan,Tashkent,Namangan,16,-2
+Denmark,Copenhagen,Aarhus,9,-1
+Luxembourg,Luxembourg City,Esch-sur-Alzette,10,-1
+Austria,Vienna,Graz,12,-1
+Slovenia,Ljubljana,Maribor,12,-1
+Georgia,Tbilisi,Kutaisi,14,-1
+Tajikistan,Dushanbe,Khujand,16,-1
+Serbia,Belgrade,Novi Sad,14,0
+Netherlands,Amsterdam,Rotterdam,10,1
+Belgium,Brussels,Antwerp,11,1
+France,Paris,Marseille,12,1
+Spain,Madrid,Barcelona,14,1
+San Marino,Dogana,Borgo Maggiore,14,1
+Montenegro,Podgorica,Nik?i?,16,1
+Iran,Tehran,Mashhad,18,1
+Ireland,Dublin,Cork,10,2
+Azerbaijan,Baku,Ganja,15,2
+Chile,Santiago,Puente Alto,15,2
+Albania,Tirana,Durr?s,16,2
+China,Shanghai,Beijing,17,2
+Great Britain,London,Birmingham,12,3
+Andorra,Andorra la Vella,Les Escaldes,14,3
+Turkey,Istanbul,Ankara,15,3
+Italy,Rome,Milan,16,3
+Nepal,Kathmandu,Pokhara,19,3
+Japan,Tokyo,Yokohama,17,4
+Monaco,Monte Carlo,La Condamine,16,5
+Mexico,Mexico City,Ecatepec,17,6
+Algeria,Algiers,Oran,18,6
+Colombia,Bogot?,Medell?n,14,7
+South Africa,Cape Town,Durban,17,7
+Uruguay,Montevideo,Ciudad de la Costa,17,7
+Greece,Athens,Thessaloniki,19,7
+Cyprus,Nicosia,Limassol,20,7
+New Zealand,Auckland,Wellington,15,8
+Portugal,Lisbon,Porto,17,8
+Argentina,Buenos Aires,C?rdoba,18,8
+Australia,Sydney,Melbourne,18,8
+Zimbabwe,Harare,Bulawayo,20,8
+Ethiopia,Addis Ababa,Dire Dawa,17,9
+Morocco,Casablanca,Fez,18,9
+Malta,Valletta,,19,9
+Israel,Jerusalem,Tel Aviv,21,9
+Madagascar,Antananarivo,Toamasina,20,10
+Lebanon,Beirut,Tripoli,21,10
+Swaziland,Manzini,Mbabane,21,10
+Kenya,Nairobi,Mombasa,20,12
+Pakistan,Karachi,Lahore,27,12
+Brazil,S?o Paulo,Rio de Janeiro,21,13
+Chinese Taipei,New Taipei,Taichung,23,13
+Paraguay,Asunci?n,Ciudad del Este,24,13
+Hong Kong,Kowloon,Victoria,24,14
+Peru,Lima,Arequipa,20,15
+Honduras,Tegucigalpa,San Pedro Sula,23,15
+Bermuda,St. George's,Hamilton,22,16
+Senegal,Dakar,Touba,25,18
+India,Mumbai,Delhi,28,18
+Costa Rica,San Jos?,Alajuela,23,19
+Tonga,Nuku?alofa,Neiafu,24,19
+Venezuela,Caracas,Maracaibo,25,20
+Timor-Leste,Dili,Dare,27,20
+Philippines,Quezon City,Manila,28,21
+Fiji,Nasinu,Suva,26,22
+Puerto Rico,San Juan,Bayam?n,27,22
+Dominica,Roseau,Portsmouth,27,22
+Trinidad and Tobago,Chaguanas,San Fernando,28,22
+Cameroon,Douala,Yaound?,27,23
+Ghana,Accra,Kumasi,27,23
+Cayman Islands,George Town,West Bay,27,23
+Togo,Lom?,Sokod?,28,23
+Jamaica,Kingston,Spanish Town,28,23
+Virgin Islands,Charlotte Amalie,Anna's Retreat,28,23
+Thailand,Bangkok,Nonthaburi,30,23
+British Virgin Islands,Road Town,Spanish Town,28,24
+Netherlands Antilles,Willemstad,Sint Michiel,29,24
+American Samoa,Tafuna,Nu'uuli,28,25
