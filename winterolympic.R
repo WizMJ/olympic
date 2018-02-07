@@ -47,6 +47,13 @@ tidy.data$Min_temp <- relevel(tidy.data$Min_temp, ref="Warm")
 
 ### 1994 year 
 ### Missing data fill-up
+medal_tb <- tidy.data %>% group_by(year) %>% summarise(M = sum(Total))
+for (i in year){
+     tidy.data$Total_s <- 
+          
+     
+}
+
 train <- subset(tidy.data, year ==1994)
 train$Total_s <- train$Total/sum(train$Total)*100
 temp <- is.na(train$pre_Total)
