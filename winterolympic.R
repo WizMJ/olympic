@@ -37,8 +37,8 @@ tidy.data <-  arrange(temp, year)
 
 ### factor cases for city temp: Cold, Warm, Hot
 #Case1: <=-5 for Cold, >=10 for Hot
-tidy.data$Min_temp <- tidy.data$Min_temp <- ifelse(tidy.data$Min_temp <=-5, "Cold",
-                              ifelse(tidy.data$Min_temp >=10, "Hot", "Warm"))
+tidy.data$Min_temp <- tidy.data$Min_temp <- ifelse(tidy.data$Min_temp <=-5, "Cold","Warm")
+                              #ifelse(tidy.data$Min_temp >=10, "Hot", "Warm"))
 tidy.data$Min_temp <- as.factor(tidy.data$Min_temp)
 tidy.data$Min_temp <- relevel(tidy.data$Min_temp, ref="Warm")
 
@@ -78,10 +78,31 @@ train[which(train$Country == "Moldova"),"GDP"] <- gdp_fill("Moldova",1994) # 199
 # 5 countries are removed
 remove <- train$Country %in% c("Slovakia", "Czech Republic", "Chinese Taipei", "American Samoa","Virgin Islands")
 train <- train[!remove,] 
-fit_lm <- lm(Total_s ~ pre_Total_s + log(GDP) + log(POP) +Min_temp, data = train)
-fit_tb <- tobit(Total_s ~ pre_Total_s + log(GDP) + log(POP) + Min_temp, left = 0, right =Inf,
-                dist ="gaussian", data = train)
-summary(m <- vglm(Total_s ~ pre_Total_s + log(GDP) + log(POP) +Min_temp, tobit(Lower = 0), data = train))
+
+fit_lm1 <- lm(Total_s ~ pre_Total_s + log(GDP) + log(POP) +Min_temp, data = train)
+fit_lm2 <- lm(Total_s ~ pre_Total_s  + Min_temp, data = train)
+fit_lm3 <- lm(Total_s ~ pre_Total_s + log(GDP)*Min_temp + log(POP), data = train)
+fit_lm4 <- lm(Total_s ~ pre_Total_s + log(GDP)*Min_temp, data = train)  # 가장 우수
+fit_lm5 <- lm(Total_s ~ pre_Total_s, data =train)
+
+# fit_tb1 <- tobit(Total_s ~ pre_Total_s + log(GDP) + log(POP) + Min_temp, left = 0, right =Inf,
+#                dist ="gaussian", data = train)  
+fit_tb1 <- vglm(Total_s ~ pre_Total_s + log(GDP) + log(POP) +Min_temp, tobit(Lower = 0), data = train)
+### 상기 5개 case 비교
+### 1998 year 
+### Missing data fill-up
+test <- subset(tidy.data, year == 1998)
+sum <- sum(test$Total)
+test$Total_s <- test$Total/sum*100
+test <- subset(na.omit(test), Total >=3)
+sqrt(mean((test$Total-predict(fit_lm1, test)/100*sum)^2))
+sqrt(mean((test$Total-predict(fit_lm2, test)/100*sum)^2))
+sqrt(mean((test$Total-predict(fit_lm3, test)/100*sum)^2))
+sqrt(mean((test$Total-predict(fit_lm4, test)/100*sum)^2))
+sqrt(mean((test$Total-predict(fit_lm5, test)/100*sum)^2))
+
+plot(test$pre_Total_s, )
+abline(0,1)
 
 ### Linear Regressoin
 coef_pval <- c()
