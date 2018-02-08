@@ -42,20 +42,33 @@ tidy.data$Min_temp <- tidy.data$Min_temp <- ifelse(tidy.data$Min_temp <=-5, "Col
 tidy.data$Min_temp <- as.factor(tidy.data$Min_temp)
 tidy.data$Min_temp <- relevel(tidy.data$Min_temp, ref="Warm")
 
+### Total_s create
+medal_tb <- tidy.data %>% group_by(year) %>% summarise(M = sum(Total))
+medal_tb <- as.data.frame(medal_tb)
+tidy.data$Total_s <- NA
+for (i in 1: nrow(tidy.data)){
+     if (tidy.data$year[i] == 1994){
+          tidy.data$Total_s[i] <- tidy.data$Total[i]/medal_tb[1,2]
+     } else if (tidy.data$year[i] == 1998) {
+          tidy.data$Total_s[i] <- tidy.data$Total[i]/medal_tb[2,2]
+     } else if (tidy.data$year[i] ==2002) {
+          tidy.data$Total_s[i] <- tidy.data$Total[i]/medal_tb[3,2]
+     } else if (tidy.data$year[i] ==2006) {
+          tidy.data$Total_s[i] <- tidy.data$Total[i]/medal_tb[4,2]
+     } else if (tidy.data$year[i] ==2010) {
+          tidy.data$Total_s[i] <- tidy.data$Total[i]/medal_tb[5,2]
+     } else if (tidy.data$year[i] ==2014) {
+          tidy.data$Total_s[i] <- tidy.data$Total[i]/medal_tb[6,2]
+     }
+}
+
 ###------------tidy data completed -------------
 ### Preprocessing by fill up and remove
 
 ### 1994 year 
 ### Missing data fill-up
-medal_tb <- tidy.data %>% group_by(year) %>% summarise(M = sum(Total))
-for (i in year){
-     tidy.data$Total_s <- 
-          
-     
-}
 
 train <- subset(tidy.data, year ==1994)
-train$Total_s <- train$Total/sum(train$Total)*100
 temp <- is.na(train$pre_Total)
 train[temp,c("pre_Total", "pre_Total_s")] <- 0
 
@@ -84,7 +97,7 @@ train[which(train$Country == "Moldova"),"GDP"] <- gdp_fill("Moldova",1994) # 199
 
 # 5 countries are removed
 remove <- train$Country %in% c("Slovakia", "Czech Republic", "Chinese Taipei", "American Samoa","Virgin Islands")
-train <- train[!remove,] 
+train94 <- train[!remove,] 
 
 fit_lm1 <- lm(Total_s ~ pre_Total_s + log(GDP) + log(POP) +Min_temp, data = train)
 fit_lm2 <- lm(Total_s ~ pre_Total_s  + Min_temp, data = train)
